@@ -23,7 +23,10 @@
     ];
 
     programs.niri.enable = true;
-    security.polkit.enable = true;
+    security = {
+      polkit.enable = true;
+      pam.services.greetd.enableGnomeKeyring = true;
+    };
     services.gnome.gnome-keyring.enable = true;
 
     xdg.portal = {
