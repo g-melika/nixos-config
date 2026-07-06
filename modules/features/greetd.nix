@@ -16,6 +16,7 @@
           size = 24;
           path = "/run/current-system/sw/share/icons";
         };
+        auth.allow_empty_password = true;
       };
     };
 

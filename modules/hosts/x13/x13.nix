@@ -16,6 +16,7 @@
       graphics
       fonts
       keyd
+      fprintd
 
       greetd
       niri
