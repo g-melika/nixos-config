@@ -4,6 +4,8 @@
       inputs.noctalia-greeter.nixosModules.default
     ];
 
+    systemd.services.greetd.after = [ "bluetooth.service" ];
+
     programs.noctalia-greeter = {
       enable = true;
       package = inputs.noctalia-greeter.packages.${pkgs.stdenv.hostPlatform.system}.default;

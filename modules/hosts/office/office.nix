@@ -28,6 +28,7 @@
       helix
       yazi
       aseprite
+      wacom
 
       vpn
 
