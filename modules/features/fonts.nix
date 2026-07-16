@@ -7,6 +7,7 @@
         work-sans
         comic-neue
         source-sans
+        symbola
         comfortaa
         inter
         lato

@@ -25,6 +25,7 @@
       kitty
       zsh
 
+      emacs
       helix
       yazi
       aseprite
