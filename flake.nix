@@ -1,5 +1,9 @@
 {
   inputs = {
+    emacs-config = {
+      url = "github:g-melika/emacs-config";
+      flake = false;
+    };
     flake-parts = {
       url = "github:hercules-ci/flake-parts";
       inputs.nixpkgs-lib.follows = "nixpkgs";

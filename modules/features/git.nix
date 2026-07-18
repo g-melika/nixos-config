@@ -4,7 +4,7 @@
     programs.git = {
       enable = true;
       config = {
-        user.name = "George Melika";
+        user.name = "g-melika";
         user.email = "georgenaiem1@gmail.com";
         init.defaultBranch = "master";
       };

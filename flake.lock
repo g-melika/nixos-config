@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "emacs-config": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1784407352,
+        "narHash": "sha256-CrJ1ZR7d4oR343Myv6CBg64tdUPL8z9jnkTG1l7myto=",
+        "owner": "g-melika",
+        "repo": "emacs-config",
+        "rev": "6637deaab006b514e7c609d5a40d12999f481b3e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "g-melika",
+        "repo": "emacs-config",
+        "type": "github"
+      }
+    },
     "flake-parts": {
       "inputs": {
         "nixpkgs-lib": [
@@ -183,6 +199,7 @@
     },
     "root": {
       "inputs": {
+        "emacs-config": "emacs-config",
         "flake-parts": "flake-parts",
         "hjem": "hjem",
         "import-tree": "import-tree",

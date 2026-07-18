@@ -1,5 +1,5 @@
 {
-  flake.nixosModules.androidStudio = { inputs, pkgs, ... }:
+  flake.nixosModules.androidStudio = { pkgs, ... }:
     let
       sdkPath =
         "/home/gmelika"
