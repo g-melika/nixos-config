@@ -12,9 +12,6 @@
         (writeShellScriptBin "doom" ''
           exec "$HOME/.config/emacs/bin/doom" "$@"
         '')
-        (writeShellScriptBin "doom-emacsclient" ''
-          exec ${emacs-pgtk}/bin/emacsclient -c "$@"
-        '')
 
         emacs-pgtk
         emacs-lsp-booster
