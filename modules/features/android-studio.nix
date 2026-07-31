@@ -16,7 +16,7 @@
         libX11
         android-tools
         (android-studio.override { forceWayland = true; })
-        mitmproxy
+        #mitmproxy
       ];
 
 
