@@ -6,8 +6,11 @@
         enable = true;
         package = pkgs.emacs-pgtk;
         install = true;
-        defaultEditor = false;
+        defaultEditor = true;
       };
+
+      environment.sessionVariables.VISUAL = "emacseditor";
+      xdg.mime.defaultApplications."text/*" = "emacsclient.desktop";
 
       environment.systemPackages = with pkgs; [
         (writeShellScriptBin "doom" ''

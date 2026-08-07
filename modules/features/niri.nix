@@ -20,6 +20,9 @@
       papirus-icon-theme
       bibata-cursors
       playerctl
+
+      imv
+      mpv
     ];
 
     programs.niri.enable = true;
@@ -36,6 +39,11 @@
         "gtk"
         "gnome"
       ];
+    };
+
+    xdg.mime.defaultApplications = {
+      "image/*" = "imv.desktop";
+      "video/*" = "mpv.desktop";
     };
 
     programs.dconf.enable = true;

@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 {
   flake.nixosModules.kodi = { pkgs, ... }: {
-    environment.systemPackages = [ pkgs.kodi ];
+    environment.systemPackages = [ pkgs.kodi-wayland ];
     networking.firewall = {
       enable = true;
       allowedTCPPorts = [
