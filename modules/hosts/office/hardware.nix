@@ -20,6 +20,13 @@
           fsType = "ext4";
         };
 
+      fileSystems."/mnt/data" =
+        {
+          device = "/dev/disk/by-label/Data";
+          fsType = "ntfs";
+          options = [ "nofail" ];
+        };
+
       fileSystems."/boot" =
         {
           device = "/dev/disk/by-uuid/7F72-8B1A";
@@ -42,4 +49,3 @@
       hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
     };
 }
-
