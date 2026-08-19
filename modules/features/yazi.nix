@@ -4,7 +4,7 @@
     environment.systemPackages = with pkgs; [
       yazi
       ffmpegthumbnailer
-      unar
+      unrar
       jq
       poppler
       fd

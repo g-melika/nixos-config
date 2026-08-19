@@ -7,6 +7,7 @@
       xdg-desktop-portal-gtk
       xdg-desktop-portal-gnome
       xwayland-satellite
+      udiskie
 
       grim
       slurp
@@ -26,6 +27,7 @@
     ];
 
     programs.niri.enable = true;
+    services.udisks2.enable = true;
     security = {
       polkit.enable = true;
       pam.services.greetd.enableGnomeKeyring = true;
