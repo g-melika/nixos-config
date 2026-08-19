@@ -19,6 +19,7 @@
 
         emacs-pgtk
         emacs-lsp-booster
+        (aspellWithDicts (dicts: [ dicts.en ]))
         git
         ripgrep
         fd
