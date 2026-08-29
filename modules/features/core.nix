@@ -70,6 +70,8 @@
       enableZshIntegration = true;
     };
 
+    programs.appimage.enable = true;
+
     environment.systemPackages = with pkgs; [
       nixpkgs-fmt
       nixd
