@@ -9,6 +9,10 @@
       syntaxHighlighting.enable = true;
     };
     programs.starship.enable = true;
+    programs.zoxide = {
+      enable = true;
+      enableZshIntegration = true;
+    };
 
     hjem.users.gmelika = {
       files = {
