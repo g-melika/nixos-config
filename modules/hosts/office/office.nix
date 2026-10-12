@@ -39,7 +39,7 @@
 
       workFlatpaks
 
-      jovianSteam
+      gaming
 
       kodi
     ];

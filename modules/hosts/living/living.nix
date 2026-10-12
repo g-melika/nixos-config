@@ -17,7 +17,7 @@
       fonts
       keyd
 
-      jovianSteam
+      gaming
       niri
       noctalia
 
