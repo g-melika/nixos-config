@@ -16,7 +16,7 @@
       graphics
       fonts
       keyd
-      fprintd
+      #fprintd
 
       greetd
       niri
@@ -34,6 +34,8 @@
       firefox
 
       kodi
+
+      retrodeck
     ];
 
   };
