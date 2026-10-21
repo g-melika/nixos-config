@@ -1,6 +1,6 @@
-# NixOS Configuration
+# NixOS and macOS Configuration
 
-Personal NixOS configuration built with flakes. Manages multiple hosts for development and entertainment.
+Personal NixOS and nix-darwin configuration built with flakes. Manages multiple hosts for development and entertainment.
 
 ## Screenshots
 
@@ -13,12 +13,13 @@ Personal NixOS configuration built with flakes. Manages multiple hosts for devel
 | **Workstation** | Rust development, Android development |
 | **ThinkPad X13 Yoga** | Lightweight travel machine, Rust projects |
 | **Living HTPC** | Jovian NixOS (SteamOS), Kodi |
+| **Mac** | Apple Silicon; shared development tools and native macOS desktop ([setup](docs/macos.md)) |
 | **Steam Deck** | Work in progress |
 
 ## Stack
 
-- **Window manager:** niri
-- **Shell:** noctalia v5
+- **Window manager:** niri (Linux), native macOS desktop (Mac)
+- **Desktop shell/bar:** noctalia v5 (Linux), native menu bar and Dock (Mac)
 - **Color scheme:** gruvbox (shell), gruvbox-material (terminal apps)
 - **Dotfile management:** hjem (plain dotfiles, no home-manager)
 - **Module structure:** dendritic pattern via import-tree

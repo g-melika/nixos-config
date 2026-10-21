@@ -13,3 +13,7 @@ precmd() {
     KITTY_CURRENT_CMD=""
     echo -ne "\033]0;$(basename "$PWD")\007"
 }
+
+if [[ "$OSTYPE" == darwin* ]]; then
+    source "$HOME/.config/zsh/macos.zsh"
+fi

@@ -67,4 +67,24 @@
       ];
 
     };
+
+  flake.darwinModules.androidStudio = { pkgs, ... }:
+    let sdkPath = "/Users/gmelika/Library/Android/sdk";
+    in {
+      environment.systemPackages = with pkgs; [
+        devbox
+        gradle
+        jdk21
+        android-tools
+        mitmproxy
+      ];
+      environment.variables = {
+        ANDROID_HOME = sdkPath;
+        ANDROID_SDK_ROOT = sdkPath;
+        JAVA_HOME = toString pkgs.jdk21.home;
+      };
+      environment.shellInit = ''
+        export PATH="$PATH:$HOME/.pub-cache/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator"
+      '';
+    };
 }

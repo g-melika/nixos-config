@@ -1,5 +1,5 @@
-{
-  flake.nixosModules.fonts = { pkgs, ... }: {
+let
+  fonts = { pkgs, ... }: {
     fonts = {
       packages = with pkgs; [
         maple-mono.NF-unhinted
@@ -23,8 +23,13 @@
         twemoji-color-font
         nerd-fonts.symbols-only
       ];
-
-      enableDefaultPackages = false;
     };
   };
+in
+{
+  flake.nixosModules.fonts = {
+    imports = [ fonts ];
+    fonts.enableDefaultPackages = false;
+  };
+  flake.darwinModules.fonts = fonts;
 }

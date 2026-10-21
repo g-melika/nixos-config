@@ -1,8 +1,7 @@
-{ config, pkgs, ... }:
-{
-  flake.nixosModules.yazi = { pkgs, ... }: {
+let
+  yazi = { pkgs, ... }: {
     environment.systemPackages = with pkgs; [
-      yazi
+      pkgs.yazi
       ffmpegthumbnailer
       unrar
       jq
@@ -12,20 +11,12 @@
       zoxide
     ];
 
-    programs.zsh.shellInit = ''
-      function y() {
-        local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-        yazi "$@" --cwd-file="$tmp"
-        cwd="$(cat "$tmp")"
-
-        if [[ -n "$cwd" && "$cwd" != "$PWD" ]]; then
-          cd "$cwd"
-        fi
-
-        rm -f "$tmp"
-      }
-    '';
+    programs.zsh.shellInit = builtins.readFile ../../dots/.config/zsh/yazi.zsh;
 
     hjem.users.gmelika.files.".config/yazi".source = ../../dots/.config/yazi;
   };
+in
+{
+  flake.nixosModules.yazi = yazi;
+  flake.darwinModules.yazi = yazi;
 }

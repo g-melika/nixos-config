@@ -1,9 +1,7 @@
-{
-  flake.nixosModules.kitty = { pkgs, lib, ... }: {
+let
+  kitty = { pkgs, ... }: {
 
-    environment.systemPackages = with pkgs; [
-      kitty
-    ];
+    environment.systemPackages = [ pkgs.kitty ];
 
     hjem.users.gmelika = {
       files = {
@@ -13,5 +11,12 @@
       };
     };
 
+  };
+in
+{
+  flake.nixosModules.kitty = kitty;
+  flake.darwinModules.kitty = {
+    imports = [ kitty ];
+    hjem.users.gmelika.files.".config/kitty/macos.conf".source = ../../dots/.config/kitty/macos.conf;
   };
 }

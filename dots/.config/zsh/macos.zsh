@@ -1,0 +1,5 @@
+source "@autosuggestions@/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+source "@syntaxHighlighting@/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+eval "$(@starship@/bin/starship init zsh)"
+eval "$(@zoxide@/bin/zoxide init zsh)"
+eval "$(@direnv@/bin/direnv hook zsh)"

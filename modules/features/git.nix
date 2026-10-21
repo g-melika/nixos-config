@@ -1,14 +1,13 @@
 {
-
   flake.nixosModules.git = { pkgs, ... }: {
     programs.git = {
       enable = true;
-      config = {
-        user.name = "g-melika";
-        user.email = "georgenaiem1@gmail.com";
-        init.defaultBranch = "master";
-      };
+      config.include.path = "${../../dots/.gitconfig}";
     };
     environment.systemPackages = [ pkgs.lazygit ];
+  };
+  flake.darwinModules.git = { pkgs, ... }: {
+    environment.systemPackages = [ pkgs.git pkgs.lazygit ];
+    hjem.users.gmelika.files.".gitconfig".source = ../../dots/.gitconfig;
   };
 }

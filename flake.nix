@@ -1,5 +1,10 @@
 {
   inputs = {
+    nix-darwin = {
+      url = "github:nix-darwin/nix-darwin";
+      inputs.nixpkgs.follows = "nixpkgs-darwin";
+    };
+    nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     emacs-config = {
       url = "github:g-melika/emacs-config";
       flake = false;
